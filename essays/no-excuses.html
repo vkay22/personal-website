@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essay Title - Vinny Kurban</title>
+    <title>Your Name - Personal Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -33,82 +33,89 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding-left: 80px;
+            padding-left: 50px;
             position: relative;
         }
 
         .container::before {
             content: '';
             position: absolute;
-            left: 60px;
+            left: 30px;
             top: 0;
             bottom: 0;
             width: 2px;
             background-color: #c77c7c;
         }
 
-        .back-link {
-            font-size: 26px;
+        .profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
             margin-bottom: 32px;
-            display: block;
-            color: #2c2c2c;
-            text-decoration: underline;
-            line-height: 32px;
-        }
-
-        .back-link:hover {
-            color: #0066cc;
+            border: 3px solid #333;
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 44px;
             font-weight: 700;
             margin-bottom: 32px;
             color: #2c2c2c;
             line-height: 32px;
         }
 
-        .date {
-            font-size: 24px;
-            color: #555;
-            margin-bottom: 32px;
-            line-height: 32px;
-            font-style: italic;
-        }
-
-        p {
+        .bio {
             font-size: 26px;
+            color: #2c2c2c;
             margin-bottom: 32px;
             line-height: 32px;
-            color: #2c2c2c;
         }
 
-        h2 {
-            font-size: 32px;
+        .section-title {
+            font-size: 26px;
             font-weight: 700;
+            margin-bottom: 0;
             margin-top: 32px;
-            margin-bottom: 32px;
-            color: #2c2c2c;
+            color: #1a1a1a;
             line-height: 32px;
         }
 
-        ul, ol {
-            margin-bottom: 32px;
-            padding-left: 20px;
-        }
-
-        li {
-            font-size: 26px;
-            line-height: 32px;
+        .links-section {
             margin-bottom: 0;
         }
 
-        blockquote {
-            border-left: 3px solid #5a9fc4;
-            padding-left: 20px;
-            margin: 32px 0;
-            font-style: italic;
-            color: #444;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin: 0;
+            font-size: 24px;
+            line-height: 32px;
+            padding: 0;
+        }
+
+        li::before {
+            content: "• ";
+            color: #333;
+            margin-right: 8px;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            transition: color 0.2s;
+            font-weight: 400;
+        }
+
+        a:hover {
+            color: #0066cc;
+        }
+
+        .link-item {
+            color: #333;
         }
 
         @media (max-width: 768px) {
@@ -126,52 +133,54 @@
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 20px;
             }
 
-            h2 {
-                font-size: 22px;
+            .profile-image {
+                width: 64px;
+                height: 64px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="/" class="back-link">← back to home</a>
+        <img src="https://via.placeholder.com/80" alt="Profile" class="profile-image">
         
-        <h1>Your Essay Title Here</h1>
+        <h1>vinny kurban (aka 'your nickname')</h1>
         
-        <p class="date">October 21, 2025</p>
-        
-        <p>This is your opening paragraph. Start with something that grabs attention or sets up the problem/idea you're exploring.</p>
+        <p class="bio">I'm a founder, creator, & enthusiast passionate about building things that matter. Add your own bio here describing what you do.</p>
 
-        <p>Continue your thoughts here. Each paragraph should develop your idea further. Keep it conversational and authentic - write like you talk.</p>
+        <div class="links-section">
+            <p class="section-title">on life...</p>
+            <ul>
+                <li><a href="essays/no-excuses.html" target="_blank">no excuses</a></li>
+                <li><a href="essays/find-your-passion.html" target="_blank">find your passion</a></li>
+                <li><a href="essays/embrace-discomfort.html" target="_blank">embrace discomfort</a></li>
+                <li><a href="essays/build-relationships.html" target="_blank">build relationships</a></li>
+                <li><a href="essays/opportunity-is-everywhere.html" target="_blank">opportunity is everywhere</a></li>
+                <li><a href="essays/who-inspires-you.html" target="_blank">who inspires you?</a></li>
+                <li><a href="essays/start-now-not-someday.html" target="_blank">start now, not someday</a></li>
+                <li><a href="essays/comfort-zone-trap.html" target="_blank">the comfort zone trap</a></li>
+                <li><a href="essays/be-kind-stay-curious.html" target="_blank">be kind, stay curious</a></li>
+            </ul>
+        </div>
 
-        <h2>A Section Heading (Optional)</h2>
-
-        <p>You can break up longer essays with headings to make them easier to read. This helps organize your thoughts into clear sections.</p>
-
-        <p>Here's another paragraph expanding on this section's main idea.</p>
-
-        <blockquote>
-            "You can include quotes or call-outs like this to emphasize important points."
-        </blockquote>
-
-        <p>And continue with more thoughts...</p>
-
-        <h2>Key Takeaways</h2>
-
-        <ul>
-            <li>You can use bullet points for lists</li>
-            <li>This makes key points stand out</li>
-            <li>And makes the essay scannable</li>
-        </ul>
-
-        <p>Wrap up with your conclusion. What do you want readers to remember or do after reading this?</p>
-
-        <p>End strong with a final thought that ties everything together.</p>
-        
-        <a href="/" class="back-link">← back to home</a>
+        <div class="links-section">
+            <p class="section-title">on business...</p>
+            <ul>
+                <li><a href="essays/constraints-breed-creativity.html" target="_blank">constraints breed creativity</a></li>
+                <li><a href="essays/be-different-not-better.html" target="_blank">be different, not better</a></li>
+                <li><a href="essays/marketing-is-everything.html" target="_blank">marketing is everything</a></li>
+                <li><a href="essays/niche-down-then-scale.html" target="_blank">niche down, then scale</a></li>
+                <li><a href="essays/talent-compounds.html" target="_blank">talent compounds</a></li>
+                <li><a href="essays/learn-from-the-best.html" target="_blank">learn from the best</a></li>
+                <li><a href="essays/authenticity-wins.html" target="_blank">authenticity wins</a></li>
+                <li><a href="essays/if-i-started-over.html" target="_blank">if I started over, here's what I'd do</a></li>
+                <li><a href="essays/3-step-plan-to-clarity.html" target="_blank">the 3-step plan to clarity</a></li>
+                <li><a href="essays/year-off-lessons.html" target="_blank">why I took a year off (and what I learned)</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
