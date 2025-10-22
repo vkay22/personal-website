@@ -17,7 +17,7 @@
             line-height: 32px;
             color: #2c2c2c;
             background: linear-gradient(to bottom, #e8f4f8 0%, #d4e9f7 100%);
-            padding: 60px 20px;
+            padding: 60px 0px 60px 0px;
             background-image: 
                 repeating-linear-gradient(
                     transparent,
@@ -34,13 +34,14 @@
             max-width: 800px;
             margin: 0 auto;
             padding-left: 50px;
+            padding-right: 20px;
             position: relative;
         }
 
         .container::before {
             content: '';
             position: absolute;
-            left: 10px;
+            left: 20px;
             top: 0;
             bottom: 0;
             width: 2px;
@@ -120,16 +121,17 @@
 
         @media (max-width: 768px) {
             body {
-                padding: 40px 16px;
+                padding: 40px 0px 40px 0px;
                 background-position: 0 40px;
             }
 
             .container {
                 padding-left: 40px;
+                padding-right: 16px;
             }
 
             .container::before {
-                left: 10px;
+                left: 15px;
             }
 
             h1 {
