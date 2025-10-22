@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Personal Page</title>
+    <title>Vinny Kurban - Personal Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -28,6 +28,68 @@
             background-size: 100% 32px;
             background-position: 0 60px;
             min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: linear-gradient(to bottom, #1a1a1a 0%, #0a0a0a 100%);
+            color: #e0e0e0;
+            background-image: 
+                repeating-linear-gradient(
+                    transparent,
+                    transparent 31px,
+                    #333333 31px,
+                    #333333 32px
+                );
+        }
+
+        body.dark-mode .container::before {
+            background-color: #666666;
+        }
+
+        body.dark-mode h1,
+        body.dark-mode .section-title,
+        body.dark-mode .bio {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode a {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode a:hover {
+            color: #64b5f6;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            transform: scale(1.1);
+        }
+
+        body.dark-mode .dark-mode-toggle {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        body.dark-mode .dark-mode-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.3);
         }
 
         .container {
@@ -150,10 +212,12 @@
     </style>
 </head>
 <body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    
     <div class="container">
         <h1><span>vinny kurban</span></h1>
         
-        <p class="bio">i connect dots most people don't see...then pretend it was obvious. overthinking in public. writing to make sense of it all.</p>
+        <p class="bio">I'm a founder, creator, & enthusiast passionate about building things that matter. Add your own bio here describing what you do.</p>
 
         <div class="links-section">
             <p class="section-title">on life...</p>
@@ -186,5 +250,26 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const button = document.querySelector('.dark-mode-toggle');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                button.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                button.textContent = '🌙';
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.dark-mode-toggle').textContent = '☀️';
+        }
+    </script>
 </body>
 </html>
