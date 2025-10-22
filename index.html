@@ -32,29 +32,38 @@
         }
 
         body.dark-mode {
-            background: linear-gradient(to bottom, #1a1a1a 0%, #0a0a0a 100%);
-            color: #e0e0e0;
+            background: linear-gradient(to bottom, #2a2d31 0%, #1c1e21 100%);
+            color: #e8e8e8;
             background-image: 
                 repeating-linear-gradient(
                     transparent,
                     transparent 31px,
-                    #333333 31px,
-                    #333333 32px
+                    #3a3d41 31px,
+                    #3a3d41 32px
                 );
         }
 
         body.dark-mode .container::before {
-            background-color: #666666;
+            background-color: #5a5d61;
         }
 
         body.dark-mode h1,
         body.dark-mode .section-title,
-        body.dark-mode .bio {
-            color: #e0e0e0;
+        body.dark-mode .bio,
+        body.dark-mode li {
+            color: #e8e8e8;
         }
 
         body.dark-mode a {
-            color: #e0e0e0;
+            color: #e8e8e8;
+        }
+
+        body.dark-mode a:hover {
+            color: #ffffff;
+        }
+        
+        body.dark-mode h1 span {
+            background: linear-gradient(180deg, transparent 60%, #5a5200 60%);
         }
 
         body.dark-mode a:hover {
