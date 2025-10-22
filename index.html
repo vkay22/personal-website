@@ -32,15 +32,15 @@
         }
 
         body.dark-mode {
-            background: linear-gradient(to bottom, #0d1b2a 0%, #1b263b 100%);
-            color: #ffffff;
+            background: linear-gradient(to bottom, #0d1b2a 0%, #1b263b 100%) !important;
+            color: #ffffff !important;
             background-image: 
                 repeating-linear-gradient(
                     transparent,
                     transparent 31px,
                     #1e3a5f 31px,
                     #1e3a5f 32px
-                );
+                ) !important;
         }
 
         body.dark-mode .container::before {
@@ -221,8 +221,6 @@
     </style>
 </head>
 <body>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
-    
     <div class="container">
         <h1><span>vinny kurban</span></h1>
         
@@ -259,26 +257,5 @@
             </ul>
         </div>
     </div>
-
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-            const button = document.querySelector('.dark-mode-toggle');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                button.textContent = '☀️';
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                button.textContent = '🌙';
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        }
-
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            document.querySelector('.dark-mode-toggle').textContent = '☀️';
-        }
-    </script>
 </body>
 </html>
